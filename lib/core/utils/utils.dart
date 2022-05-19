@@ -1,6 +1,11 @@
 import 'dart:convert';
 
 import 'package:intl/intl.dart';
+import 'package:http/http.dart' as http;
+
+extension Response on http.Response {
+  bool get isSuccessful => statusCode >= 200 && statusCode < 300;
+}
 
 class Utils {
   static formatPrice(double price) => '\$ ${price.toStringAsFixed(2)}';

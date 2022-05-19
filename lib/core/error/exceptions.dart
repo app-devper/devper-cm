@@ -3,5 +3,3 @@ class AppException implements Exception {
 
   AppException(this.error);
 }
-
-class CacheException implements Exception {}
