@@ -41,6 +41,6 @@ class ErrorResponse {
   });
 
   String getMessage() {
-    return "$message";
+    return message;
   }
 }
