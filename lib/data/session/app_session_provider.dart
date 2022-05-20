@@ -21,5 +21,5 @@ abstract class AppSessionProvider {
 
   String getLocale();
 
-  void setLocale(String accessToken);
+  void setLocale(String locale);
 }
