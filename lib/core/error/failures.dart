@@ -9,10 +9,10 @@ class Failure {
   Failure(Exception e) {
     if (e is AppException) {
       error = e.error;
-    } if (e is HttpException) {
+    } else if (e is HttpException) {
       Map<String, dynamic> json = jsonDecode(e.response.body);
       error = json['error'] ?? e.response.reasonPhrase;
-    } if (e is SocketException) {
+    } else if (e is SocketException) {
       error = "Connection error. Please try again.";
     } else {
       error = e.toString();
