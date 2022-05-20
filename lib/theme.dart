@@ -3,7 +3,16 @@ import 'package:flutter/services.dart';
 
 import 'core/log/logger.dart';
 
+
 class CustomColor {
+
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color fontBlack = Color(0xDE000000);
+  static const Color primary = Color(0xFF245f97);
+  static const Color textFieldBackground = Color(0x1E000000);
+  static const Color hintColor = Color(0x99000000);
+  static const Color statusBarColor = Color(0x1e000000);
+
   static Color font1 = const Color(0xFF1c4776);
   static Color font2 = const Color(0xFF979797);
   static Color font3 = const Color(0xFF00bf7a);
@@ -129,4 +138,45 @@ class CustomColor {
       CustomColor.buttonSecondary2Font = Color(buttonSecondary2Font);
     }
   }
+}
+
+class CustomTheme {
+  static ThemeData mainTheme = ThemeData(
+    // Default brightness and colors.
+    brightness: Brightness.light,
+    primaryColor: CustomColor.primary,
+    primaryColorDark: Colors.cyan[600],
+
+    // Default font family.
+    fontFamily: 'Roboto',
+
+    // Default TextTheme. Use this to specify the default
+    // text styling for headlines, titles, bodies of text, and etc.
+    textTheme: TextTheme(
+      headline5: TextStyle(
+        fontSize: 20.0,
+        fontWeight: FontWeight.bold,
+        color: CustomColor.fontBlack,
+      ),
+      headline6: TextStyle(
+        fontSize: 18.0,
+        fontWeight: FontWeight.bold,
+        color: CustomColor.fontBlack,
+      ),
+      bodyText2: TextStyle(
+        fontSize: 16.0,
+        color: CustomColor.fontBlack,
+      ),
+      bodyText1: TextStyle(
+        fontSize: 16.0,
+        color: CustomColor.hintColor,
+      ),
+      button: TextStyle(
+        color: CustomColor.white,
+        fontFamily: 'Roboto',
+        fontWeight: FontWeight.w500,
+        fontSize: 16,
+      ),
+    ),
+  );
 }
