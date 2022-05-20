@@ -6,6 +6,8 @@ abstract class NetworkConfig {
 
   String getClientId();
 
-  String getHost();
+  String getHostUm();
+
+  String getHostApp();
 }
 
