@@ -1,7 +1,4 @@
 abstract class AppSessionProvider {
-  String getSystem();
-
-  void setSystem(String system);
 
   String getClientId();
 
