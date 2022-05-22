@@ -6,12 +6,14 @@ class AppConfig {
   final String logo;
   final String name;
   final String system;
+  final String home;
 
   AppConfig({
     required this.apiUrl,
     required this.logo,
     required this.name,
     required this.system,
+    required this.home,
   });
 
   static Future<AppConfig> forEnvironment(String? env) async {
@@ -32,6 +34,7 @@ class AppConfig {
       logo: json['logo'],
       name: json['name'],
       system: json['system'],
+      home: json['home'],
     );
   }
 }
