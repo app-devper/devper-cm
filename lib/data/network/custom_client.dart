@@ -5,8 +5,15 @@ import 'package:common/data/network/interceptor.dart';
 import 'package:http/http.dart';
 
 class CustomClient implements Client {
-  bool isDebug = false;
-  List<Interceptor> interceptors = [];
+  final List<Interceptor> _interceptors = [];
+
+  void addInterceptor(Interceptor interceptor) {
+    _interceptors.add(interceptor);
+  }
+
+  void clearInterceptor() {
+    _interceptors.clear();
+  }
 
   @override
   Future<Response> head(Uri url, {Map<String, String>? headers}) => _sendUnstreamed('HEAD', url, headers);
@@ -79,7 +86,7 @@ class CustomClient implements Client {
 
   Future<Request> _interceptRequest(Request req) async {
     final body = req.body;
-    for (final i in interceptors) {
+    for (final i in _interceptors) {
       req = await i.onRequest(req);
     }
     assert(
@@ -92,7 +99,7 @@ class CustomClient implements Client {
 
   Future<Response> _interceptResponse(Response res) async {
     final body = res.body;
-    for (final i in interceptors) {
+    for (final i in _interceptors) {
       res = await i.onResponse(res);
     }
     assert(

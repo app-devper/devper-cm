@@ -1,11 +1,9 @@
+import 'package:common/core/log/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'core/log/logger.dart';
-
 
 class CustomColor {
-
   static const Color white = Color(0xFFFFFFFF);
   static const Color fontBlack = Color(0xDE000000);
   static const Color primary = Color(0xFF245f97);
@@ -152,7 +150,7 @@ class CustomTheme {
 
     // Default TextTheme. Use this to specify the default
     // text styling for headlines, titles, bodies of text, and etc.
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headline5: TextStyle(
         fontSize: 20.0,
         fontWeight: FontWeight.bold,
