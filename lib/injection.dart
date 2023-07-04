@@ -1,7 +1,5 @@
 import 'package:get_it/get_it.dart';
 
-final sl = GetIt.instance;
-
 GetIt getIt() {
-  return sl;
+  return GetIt.instance;
 }

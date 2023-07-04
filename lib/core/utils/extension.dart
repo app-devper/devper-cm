@@ -1,3 +1,4 @@
+import 'package:common/core/result/result.dart';
 import 'package:common/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -145,4 +146,23 @@ Widget buildTextFormField(
       },
     ),
   );
+}
+
+extension StreamMapping<T> on Stream<Result<T, Error>> {
+  Stream<S> mapSuccess<S>(S Function(T event) convert) {
+    return skipWhile((element) => element.isFailure)
+        .map((event) => convert(event.value));
+  }
+}
+
+extension WidgetStream<T> on Stream<T> {
+  StreamBuilder<T> toWidget({required T initialData, required Widget Function(T event) widgetBuilder}) {
+    return StreamBuilder(
+      initialData: initialData,
+      stream: this,
+      builder: (BuildContext context, AsyncSnapshot<T> snapshot) {
+        return widgetBuilder(snapshot.data as T);
+      },
+    );
+  }
 }
