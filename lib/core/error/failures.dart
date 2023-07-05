@@ -23,4 +23,8 @@ class Failure {
       error = e.toString();
     }
   }
+
+  String getMessage() {
+    return "$error [$errorCode]";
+  }
 }
