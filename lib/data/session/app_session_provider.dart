@@ -19,4 +19,7 @@ abstract class AppSessionProvider {
   String getLocale();
 
   void setLocale(String locale);
+
+
+  void clear();
 }
