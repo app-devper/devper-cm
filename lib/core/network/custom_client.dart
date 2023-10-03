@@ -6,14 +6,7 @@ import 'package:http/http.dart';
 import 'interceptor.dart';
 
 class CustomClient implements Client {
-  final String _baseUrl;
   final List<Interceptor> _interceptors = [];
-
-  CustomClient({
-    required String baseUrl,
-  }) : _baseUrl = baseUrl;
-
-  get baseUrl => _baseUrl;
 
   void addInterceptor(Interceptor interceptor) {
     _interceptors.add(interceptor);
