@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:common/theme.dart';
+import 'package:common/core/theme/theme.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String text;
@@ -18,13 +18,13 @@ class ButtonWidget extends StatelessWidget {
         primary: CustomColor.primary,
         minimumSize: const Size.fromHeight(50),
       ),
+      onPressed: onClicked,
       child: FittedBox(
         child: Text(
           text,
           style: const TextStyle(fontSize: 16, color: Colors.white),
         ),
       ),
-      onPressed: onClicked,
     );
   }
 }
@@ -46,10 +46,10 @@ class ButtonIconWidget extends StatelessWidget {
         primary: CustomColor.primary,
         minimumSize: const Size.fromHeight(50),
       ),
+      onPressed: onClicked,
       child: FittedBox(
         child: icon,
       ),
-      onPressed: onClicked,
     );
   }
 }
@@ -72,6 +72,7 @@ class ButtonPrimary extends StatelessWidget {
         minimumSize: const Size.fromHeight(40),
         splashFactory: NoSplash.splashFactory,
       ),
+      onPressed: onClicked,
       child: FittedBox(
         child: Text(
           text,
@@ -82,7 +83,6 @@ class ButtonPrimary extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: onClicked,
     );
   }
 }

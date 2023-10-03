@@ -1,4 +1,4 @@
-import 'package:common/theme.dart';
+import 'package:common/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:common/localizations/localizations.dart';
 

@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:common/core/log/logger.dart';
-import 'package:common/data/network/interceptor.dart';
+
 import 'package:http/http.dart';
+
+import 'interceptor.dart';
 
 class HttpLoggingInterceptor implements Interceptor {
   @override

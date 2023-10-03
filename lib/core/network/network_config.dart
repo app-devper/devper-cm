@@ -4,10 +4,5 @@ abstract class NetworkConfig {
 
   bool isDebug();
 
-  String getClientId();
-
-  String getHostUm();
-
-  String getHostApp();
 }
 

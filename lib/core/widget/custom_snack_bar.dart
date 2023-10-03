@@ -14,8 +14,8 @@ class CustomSnackBar {
     hideAll();
     final snackBar = SnackBar(
       key: key,
-      content: Row(
-        children: const <Widget>[
+      content: const Row(
+        children: <Widget>[
           CircularProgressIndicator(),
           SizedBox(width: 10.0),
           Text("Loading..."),
