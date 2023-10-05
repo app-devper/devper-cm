@@ -14,7 +14,6 @@ dependencies:
   http: ^1.1.0
   logging: ^1.0.2
   intl: ^0.18.0
-  dartz: ^0.10.0-nullsafety.2
 
   flutter_localizations:
     sdk: flutter
