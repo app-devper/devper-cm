@@ -30,8 +30,8 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: packages/common/font/roboto_regular.ttf
-        - asset: packages/common/font/roboto_bold.ttf
+        - asset: packages/common/assets/font/roboto_regular.ttf
+        - asset: packages/common/assets/font/roboto_bold.ttf
           weight: 700
 
   module:
